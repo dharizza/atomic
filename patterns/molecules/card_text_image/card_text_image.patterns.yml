@@ -1,0 +1,39 @@
+card_text_image:
+  label: 'Card: Text - Image'
+  description: 'A card with an image on one side and title, text and CTAs on the other.'
+  variants:
+    default:
+      label: Default
+      variant: left
+    left:
+      label: Left
+      description: Image to the left
+    right:
+      label: Right
+      description: Image to the right
+  fields:
+    title:
+      label: 'Title'
+      description: 'Card title'
+      type: text
+      preview: 'Ready to Make a Difference?'
+    text:
+      label: 'Text'
+      description: 'Body of the component'
+      type: text
+      preview: "You’ve made it all the way down here. It’s time to help us grow better places to live."
+    image:
+      label: Image
+      description: 'Lala'
+      type: image
+      preview: <img src="https://placekitten.com/600/400" />
+    image_url:
+      label: 'Image URL'
+      description: 'URL to the image'
+      type: url
+      preview: https://placekitten.com/600/400
+    ctas:
+      label: 'CTAs'
+      description: 'List of CTAs'
+      type: text
+      preview: <a class="btn default-btn" href="#">Partner with us</a><a class="btn link-btn" href="#">Get involved as individual</a>

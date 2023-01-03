@@ -1,0 +1,44 @@
+{% set classes = [
+  'row',
+  'my-5',
+  'card-text-image',
+  variant == 'right' ? 'reverse',
+] %}
+
+<div{{ attributes.addClass(classes)}}>
+  {% set image_classes = [
+    'col-md-6',
+    'card__image',
+    variant == 'right' ? 'order-2' : 'order-1',
+  ] %}
+  {% set image_attributes = create_attribute().addClass(image_classes) %}
+  <div{{ image_attributes }}>
+    {# <img src="{{ image_url }}" /> #}
+    {{ image }}
+  </div>
+
+  {% set text_classes = [
+    'col-md-6',
+    'card__text',
+    variant == 'right' ? 'order-1' : 'order-2',
+  ] %}
+  {% set text_attributes = create_attribute().addClass(text_classes) %}
+  <div{{ text_attributes }}>
+    {% if title %}
+      <h3>{{ title }}</h3>
+    {% endif %}
+    {% if text %}
+      <div class="mb-3">{{ text }}</div>
+    {% endif %}
+    {% if ctas %}
+      <div class="card__ctas">
+        {{ ctas }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{{ pattern('button', {
+  text: "Hello world",
+  url: "#"
+}, 'secondary') }}
