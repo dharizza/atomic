@@ -1,0 +1,18 @@
+{# <a class="btn default-btn {{ variant }}" href="{{ url }}">{{ text }}</a> #}
+
+{% set classes = [
+  'btn',
+  variant == 'secondary' ? 'link-btn' : 'default-btn',
+] %}
+
+{% set button_attributes = create_attribute()
+  .setAttribute('href', url)
+  .addClass(classes)
+ %}
+
+<a{{ button_attributes }}>
+  {{ text }}
+  {% if variant == 'secondary' %}
+    <i class="fas fa-arrow-right"></i>
+  {% endif %}
+</a>
