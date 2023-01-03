@@ -1,0 +1,31 @@
+button:
+  label: 'Button'
+  description: 'Button component'
+  variants:
+    default:
+      label: Default button
+      description: Default style for buttons
+      variant: primary
+    primary:
+      label: Primary button
+      description: Primary button style, button with green background.
+    secondary:
+      label: Secondary button
+      description: Secondary button style, button with arrow, no background.
+  fields:
+    text:
+      type: string
+      label: Button text
+      description: Text to be placed on the button
+      preview: Read more
+    url:
+      type: url
+      label: URL
+      description: URL that the user will be redirected to.
+      preview: https://example.com
+  libraries:
+    -
+      button:
+        css:
+          component:
+            dist/css/styles.min.css: { minified: true }
