@@ -1,0 +1,29 @@
+{% set classes = [
+  'article-teaser',
+  'my-3',
+] %}
+
+<div{{ attributes.addClass(classes)}}>
+  {% set image_classes = [
+    'article-teaser__image',
+  ] %}
+  {% set image_attributes = create_attribute().addClass(image_classes) %}
+  <div{{ image_attributes }}>
+    {# <img src="{{ image_url }}" /> #}
+    {{ image_url }}
+  </div>
+
+  <div{{ text_attributes }}>
+    {% if date %}
+      <small class="article-teaser__date">{{ date }}</small>
+    {% endif %}
+    {% if title %}
+      <h3 class="article-teaser__title">{{ title }}</h3>
+    {% endif %}
+    {% if ctas %}
+      <div class="article-teaser__cta">
+        {{ ctas }}
+      </div>
+    {% endif %}
+  </div>
+</div>

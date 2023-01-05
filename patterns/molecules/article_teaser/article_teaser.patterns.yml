@@ -1,0 +1,30 @@
+article_teaser:
+  label: 'Article Teaser'
+  description: 'Card that represents the teaser version of an article.'
+  fields:
+    title:
+      label: 'Title'
+      description: 'Article title'
+      type: text
+      preview: 'Ready to Make a Difference?'
+    date:
+      label: 'Date'
+      description: 'Publishing date'
+      type: text
+      preview: "May 13, 2023"
+    image_url:
+      label: 'Image URL'
+      description: 'URL to the image'
+      type: url
+      preview: https://placekitten.com/400/300
+    ctas:
+      label: 'CTA'
+      description: 'Link to article'
+      type: text
+      preview: <a class="btn link-btn" href="#">Read more<i class="fas fa-arrow-right"></i></a>
+  libraries:
+    -
+      article_teaser:
+        css:
+          component:
+            dist/css/styles.min.css: { minified: true }
