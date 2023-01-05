@@ -37,3 +37,9 @@ card_text_image:
       description: 'List of CTAs'
       type: text
       preview: <a class="btn default-btn" href="#">Partner with us</a><a class="btn link-btn" href="#">Get involved as individual</a>
+  libraries:
+    -
+      card_text_image:
+        css:
+          component:
+            dist/css/styles.min.css: { minified: true }
